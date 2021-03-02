@@ -21,13 +21,13 @@ security-checker:
 phpcs:
   stage: CodingStandards
   script:
-    -phpcs -v --standard=PSR2 --ignore=./src/Kernel.php ./src
+    - phpcs -v --standard=PSR2 --ignore=./src/Kernel.php ./src
   allow_failure: false
 
 phpstan:
   stage: CodingStandards
   script:
-    -phpstan analyse ./src
+    - phpstan analyse ./src
   allow_failure: false
   
 twig-lint:
@@ -42,4 +42,3 @@ phpunit:
     - php bin/phpunit
   allow_failure: false
   
-
