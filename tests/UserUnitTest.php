@@ -2,6 +2,7 @@
 
 namespace App\Tests;
 
+use App\Entity\BlogPost;
 use App\Entity\Project;
 use App\Entity\Skill;
 use App\Entity\User;
@@ -14,13 +15,15 @@ class UserUnitTest extends TestCase
         $user = new User();
         $project = new Project();
         $skill = new Skill();
+        $post = new BlogPost();
 
         $user->setEmail('test@test.com')
             ->setNom('nom')
             ->setPrenom('prenom')
             ->setPassword('password')
             ->addProject($project)
-            ->addSkill($skill);
+            ->addSkill($skill)
+            ->addBlogPost($post);
 
 
         $this->assertEquals("test@test.com", $user->getEmail());
@@ -29,6 +32,7 @@ class UserUnitTest extends TestCase
         $this->assertEquals("password", $user->getPassword());
         $this->assertEquals($user, $project->getUser());
         $this->assertEquals($user, $skill->getUser());
+        $this->assertEquals($user, $post->getUser());
     }
 
     public function testInvalidUser(): void

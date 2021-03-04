@@ -56,10 +56,16 @@ class User implements UserInterface
      */
     private $Project;
 
+    /**
+     * @ORM\OneToMany(targetEntity=BlogPost::class, mappedBy="user")
+     */
+    private $blogPosts;
+
     public function __construct()
     {
         $this->skill = new ArrayCollection();
         $this->Project = new ArrayCollection();
+        $this->blogPosts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -221,6 +227,36 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($project->getUser() === $this) {
                 $project->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|BlogPost[]
+     */
+    public function getBlogPosts(): Collection
+    {
+        return $this->blogPosts;
+    }
+
+    public function addBlogPost(BlogPost $blogPost): self
+    {
+        if (!$this->blogPosts->contains($blogPost)) {
+            $this->blogPosts[] = $blogPost;
+            $blogPost->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBlogPost(BlogPost $blogPost): self
+    {
+        if ($this->blogPosts->removeElement($blogPost)) {
+            // set the owning side to null (unless already changed)
+            if ($blogPost->getUser() === $this) {
+                $blogPost->setUser(null);
             }
         }
 
