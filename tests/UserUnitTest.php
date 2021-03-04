@@ -2,6 +2,8 @@
 
 namespace App\Tests;
 
+use App\Entity\Project;
+use App\Entity\Skill;
 use App\Entity\User;
 use PHPUnit\Framework\TestCase;
 
@@ -10,15 +12,23 @@ class UserUnitTest extends TestCase
     public function testValidUser(): void
     {
         $user = new User();
+        $project = new Project();
+        $skill = new Skill();
+
         $user->setEmail('test@test.com')
             ->setNom('nom')
             ->setPrenom('prenom')
-            ->setPassword('password');
+            ->setPassword('password')
+            ->addProject($project)
+            ->addSkill($skill);
+
 
         $this->assertEquals("test@test.com", $user->getEmail());
         $this->assertEquals("nom", $user->getNom());
         $this->assertEquals("prenom", $user->getPrenom());
         $this->assertEquals("password", $user->getPassword());
+        $this->assertEquals($user, $project->getUser());
+        $this->assertEquals($user, $skill->getUser());
     }
 
     public function testInvalidUser(): void
@@ -29,9 +39,32 @@ class UserUnitTest extends TestCase
             ->setPrenom('prenom')
             ->setPassword('password');
 
+
         $this->assertFalse($user->getEmail() === "false@test.com");
         $this->assertFalse($user->getNom() === "false");
         $this->assertFalse($user->getPrenom() === "false");
-        $this->assertFalse($user->getPassword() ==="false" );
+        $this->assertFalse($user->getPassword() === "false" );
+    }
+
+    public function testAddValidProject(): void
+    {
+        $user = new User();
+        $project = new Project();
+
+        $user->addProject($project);
+
+        $this->assertSame($user, $project->getUser());
+
+    }
+
+    public function testAddValidSkill(): void
+    {
+        $user = new User();
+        $skill = new Skill();
+
+        $user->addSkill($skill);
+
+        $this->assertSame($user, $skill->getUser());
+
     }
 }
