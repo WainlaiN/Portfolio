@@ -32,6 +32,11 @@ class Skill
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $number;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Skill
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getNumber(): ?int
+    {
+        return $this->number;
+    }
+
+    public function setNumber(int $number): self
+    {
+        $this->number = $number;
 
         return $this;
     }
