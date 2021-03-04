@@ -8,6 +8,8 @@
 * Composer
 * Symfony CLI
 * nodejs / npm
+* Docker
+* Docker-compose
 
 Vous pouvez vérifier les pré-requis avec la commande suivante (CLI symfony) :
 
@@ -18,4 +20,5 @@ symfony check:requirements
 composer install
 npm install
 npm run build
-symfony server:start -d
+docker-compose up -d
+symfony serve -d
