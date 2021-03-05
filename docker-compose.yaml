@@ -14,3 +14,16 @@ services:
     mailer:
         image: schickling/mailcatcher
         ports: [1025, 1080]
+    phpmyadmin:
+        image: phpmyadmin
+        container_name: phpmyadmin
+        environment:
+        #- PMA_ARBITRARY=1
+            PMA_HOST: database
+            PMA_USER: root
+            PMA_PASSWORD: password
+        restart: always
+        ports:
+        - 8080:80
+        volumes:
+        - /sessions
