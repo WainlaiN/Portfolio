@@ -18,7 +18,6 @@ services:
         ports: [1025, 1080]
     phpmyadmin:
         image: phpmyadmin
-        container_name: phpmyadmin
         environment:
         #- PMA_ARBITRARY=1
             PMA_HOST: database
