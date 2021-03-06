@@ -19,6 +19,7 @@ class UserFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
+        //create User to access EasyAdmin
         $user = new User();
         $user->setEmail("admin@gmail.com")
             ->setPassword($this->encoder->encodePassword($user, "test"))
