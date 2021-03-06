@@ -20,5 +20,6 @@ symfony check:requirements
 composer install
 npm install
 npm run build
+symfony console d:f:l
 docker-compose up -d
 symfony serve -d

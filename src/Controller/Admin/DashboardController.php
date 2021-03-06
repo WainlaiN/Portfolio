@@ -47,7 +47,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Skills');
         yield MenuItem::linkToCrud('Skill', 'fas fa-tasks', Skill::class);
 
-        yield MenuItem::linkToRoute('Home', 'fas fa-home', 'home');
-                
+        yield MenuItem::linkToRoute('Home', 'fas fa-home', 'home');                
     }
 }
