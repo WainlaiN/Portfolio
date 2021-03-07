@@ -21,12 +21,14 @@ class UserFixtures extends Fixture
     {
         //create User to access EasyAdmin
         $user = new User();
-        $user->setEmail("admin@gmail.com")
-            ->setPassword($this->encoder->encodePassword($user, "test"))
+        $user->setEmail("nicodupriez@hotmail.com")
+            ->setPassword($this->encoder->encodePassword($user, "admin"))
             ->setPrenom("nicolas")
-            ->setNom("dup");
+            ->setNom("dupriez");
 
         $manager->persist($user);
+
+        $this->addReference(User::class, $user);
 
         $manager->flush();
     }
