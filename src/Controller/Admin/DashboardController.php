@@ -46,6 +46,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Project', 'fas fa-project-diagram', Project::class);
 
         yield MenuItem::section('Skills');
-        yield MenuItem::linkToCrud('Skill', 'fas fa-tasks', Skill::class);       
+        yield MenuItem::linkToCrud('Skill', 'fas fa-tasks', Skill::class);
     }
 }
