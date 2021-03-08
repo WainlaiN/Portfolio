@@ -9,7 +9,7 @@ use Doctrine\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 class SkillFixtures extends Fixture implements DependentFixtureInterface
-{    
+{
     public function load(ObjectManager $manager)
     {
         $user = $this->getReference(User::class);

@@ -69,5 +69,5 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
     public function getDependencies()
     {
         return [UserFixtures::class];
-    }    
+    }
 }
