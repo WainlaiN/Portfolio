@@ -32,5 +32,4 @@ class ProjectCrudController extends AbstractCrudController
             DateField::new('updatedAt')
         ];
     }
-    
 }

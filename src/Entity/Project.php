@@ -151,7 +151,7 @@ class Project
      * Get the value of updatedAt
      *
      * @return  \DateTime
-     */ 
+     */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
@@ -163,7 +163,7 @@ class Project
      * @param  \DateTime  $updatedAt
      *
      * @return  self
-     */ 
+     */
     public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
