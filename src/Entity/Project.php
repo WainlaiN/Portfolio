@@ -7,6 +7,7 @@ use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
@@ -32,7 +33,7 @@ class Project
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $image;
@@ -58,6 +59,12 @@ class Project
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="Project")
      */
     private $user;
+
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
 
     public function __construct()
     {
@@ -151,7 +158,7 @@ class Project
      * Get the value of updatedAt
      *
      * @return  \DateTime
-     */ 
+     */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
@@ -163,10 +170,22 @@ class Project
      * @param  \DateTime  $updatedAt
      *
      * @return  self
-     */ 
+     */
     public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

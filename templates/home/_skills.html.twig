@@ -1,83 +1,65 @@
 <div class="container mt-5">
 
-	<div class="section-title">
+	<div
+		class="section-title mb-5">
 		<!-- Headin -->
-		<h1 class="display-1 fw-bold text-center">Skills</h1>
-		<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-			consectetur
-			velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
-			officiis
-			commodi quidem hic quas.</p>
+		<h1 class="display-4 fw-bold text-center">Mes Compétences</h1>
+		<!-- Text -->
+		<p class="lead text-secondary mb-4">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+						consectetur
+						velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
+						officiis
+						commodi quidem hic quas.</p>
 	</div>
 
-	<div class="row skills-content">
+	<div
+		class="row skills-content">
 
-		<div class="col-lg-6">
+		{#<div class="col-lg-6">#}
 
+		{% for skill in skills %}
 
-			<div class="card-body">
-				HTML5
-				<div class="progress mb-3">
-					<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				CSS3
-				<div class="progress mb-3">
-					<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				BOOTSTRAP
-				<div class="progress mb-3">
-					<div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				PHP
-				<div class="progress mb-3">
-					<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				Symfony
-				<div class="progress mb-3">
-					<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-						aria-valuemin="0" aria-valuemax="100"></div>
+			<div class="col-12 col-md-6 product mb-1">
+				{{ skill.title }}
+				<div class="progress mb-1">
+					<div class="progress-bar bg-success" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
 				</div>
 
 			</div>
 
-		</div>
 
-		<div class="col-lg-6">
+		{% endfor %}
 
+		{#<div class="card-body">
+						HTML5
+						<div class="progress mb-3">
+							<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+								aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						CSS3
+						<div class="progress mb-3">
+							<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+								aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						BOOTSTRAP
+						<div class="progress mb-3">
+							<div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
+								aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						PHP
+						<div class="progress mb-3">
+							<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+								aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						Symfony
+						<div class="progress mb-3">
+							<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+								aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+		
+					</div>#}
 
-			<div class="card-body">
-
-				Linux
-				<div class="progress mb-3">
-					<div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="25"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				RabbitMQ
-				<div class="progress mb-3">
-					<div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="50"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				Solr
-				<div class="progress mb-3">
-					<div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="75"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				API REST
-				<div class="progress mb-3">
-					<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="75"
-						aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-
-			</div>
-
-		</div>
 
 	</div>
 
-</div>
-
-</div>
+</div></div>
