@@ -1,62 +1,49 @@
 <!-- WELCOME -->
 
-<section class="pt-8 pt-md-12">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div
-				class="col-12 col-md-10 col-lg-8 text-center">
+<div class="container mt-5">
+	<div
+		class="section-title">
+		<!-- Headin -->
+		<h1 class="display-4 fw-bold text-center">Mes Projets</h1>
+		<p class="lead text-secondary mb-4">We design & build products, tools, apps, and sites for companies trying to do great things for our
+																							                    planet.</p>
+	</div>
 
-				<!-- Headin -->
-				<h1 class="display-1 fw-bold">
-					Mes Projets.
-				</h1>
 
-				<!-- Text -->
-				<p class="lead text-secondary mb-4">
-					We design & build products, tools, apps, and sites for companies trying to do great things for our
-																				                    planet.
-				</p>
+	<!-- CONTENT -->
+	<section class="py-8 py-md-5">
+		<div class="container">
+			<div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
+				{% for project in projects %}
+					<div
+						class="col-12 col-md-4 product mb-4">
+
+						<!-- Card -->
+						<a
+							class="card shadow-light-lg" href="{{ project.url }}">
+
+							<!-- Image -->
+							<div class="card-zoom">
+								<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('thumbnail') }}" alt="{{ project.title }}">
+							</div>
+
+							<!-- Overlay -->
+							<div class="card-img-overlay card-img-overlay-hover">
+								<div
+									class="card-body bg-white">
+
+									<!-- Preheading -->
+									<h6 class="text-uppercase mb-1 text-muted">{{ project.title }}</h6>
+
+									<!-- Heading -->
+									<h5 class="mb-0">{{ project.description | striptags }}</h5>
+
+								</div>
+							</div>
+						</a>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
-		<!-- / .row -->
-	</div>
-	<!-- / .container -->
-</section>
-
-
-<!-- CONTENT -->
-<section class="py-8 py-md-5">
-	<div class="container">
-		<div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
-			{% for project in projects %}
-				<div
-					class="col-12 col-md-4 product mb-4">
-
-					<!-- Card -->
-					<a
-						class="card shadow-light-lg" href="{{ project.url }}">
-
-						<!-- Image -->
-						<div class="card-zoom">
-							<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('thumbnail') }}" alt="{{ project.title }}">
-						</div>
-
-						<!-- Overlay -->
-						<div class="card-img-overlay card-img-overlay-hover">
-							<div
-								class="card-body bg-white">
-
-								<!-- Preheading -->
-								<h6 class="text-uppercase mb-1 text-muted">{{ project.title }}</h6>
-
-								<!-- Heading -->
-								<h5 class="mb-0">{{ project.description | striptags }}</h5>
-
-							</div>
-						</div>
-					</a>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
-</section>
+	</section>
+</div>
