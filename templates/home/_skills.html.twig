@@ -19,10 +19,11 @@
 
 		{% for skill in skills %}
 
-			<div class="col-12 col-md-6 product mb-1">
-				{{ skill.title }}
+		
+			<div class="col-12 col-md-6 product mb-2">
+				<span class="skill">{{ skill.title }} <i class="val">{{ skill.percentage }}%</i></span>
 				<div class="progress mb-1">
-					<div class="progress-bar bg-success" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+					<div class="progress-bar" data-aos="fade-right" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
 				</div>
 
 			</div>
