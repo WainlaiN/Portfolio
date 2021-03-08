@@ -1,6 +1,6 @@
 <!-- WELCOME -->
 
-<section class="pt-8 pt-md-12 pb-12 pb-md-15">
+<section class="pt-8 pt-md-12">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div
@@ -14,25 +14,8 @@
 				<!-- Text -->
 				<p class="lead text-secondary mb-4">
 					We design & build products, tools, apps, and sites for companies trying to do great things for our
-					                    planet.
+																				                    planet.
 				</p>
-
-				<!-- Badges -->
-				<nav class="nav justify-content-center">
-					<a class="badge rounded-pill bg-secondary-soft active me-1 mb-1" href="#" data-bs-toggle="pill" data-filter="*" data-bs-target="#portfolio">
-						<span class="h6 text-uppercase">Primary</span>
-					</a>
-					<a class="badge rounded-pill bg-secondary-soft me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".product" data-bs-target="#portfolio">
-						<span class="h6 text-uppercase">Product</span>
-					</a>
-					<a class="badge rounded-pill bg-secondary-soft me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".ux" data-bs-target="#portfolio">
-						<span class="h6 text-uppercase">UX</span>
-					</a>
-					<a class="badge rounded-pill bg-secondary-soft me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".resources" data-bs-target="#portfolio">
-						<span class="h6 text-uppercase">Resources</span>
-					</a>
-				</nav>
-
 			</div>
 		</div>
 		<!-- / .row -->
@@ -42,203 +25,38 @@
 
 
 <!-- CONTENT -->
-<section class="py-8 py-md-11 mt-n10 mt-md-n14">
+<section class="py-8 py-md-5">
 	<div class="container">
 		<div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
-			<div
-				class="col-12 col-md-4 product">
+			{% for project in projects %}
+				<div
+					class="col-12 col-md-4 product mb-4">
 
-				<!-- Card -->
-				<a
-					class="card shadow-light-lg" href="#!">
+					<!-- Card -->
+					<a
+						class="card shadow-light-lg" href="{{ project.url }}">
 
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img" src="{{ asset('/images/chalets.png') }}" alt="...">
-					</div>
-
-					<!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">Chalets & Caviar</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">Wordpress CMS</h4>
-
+						<!-- Image -->
+						<div class="card-zoom">
+							<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('thumbnail') }}" alt="{{ project.title }}">
 						</div>
-					</div>
 
-				</a>
+						<!-- Overlay -->
+						<div class="card-img-overlay card-img-overlay-hover">
+							<div
+								class="card-body bg-white">
 
-				<!-- Card -->
-				<a
-					class="card card-flush mb-7" href="#!">
+								<!-- Preheading -->
+								<h6 class="text-uppercase mb-1 text-muted">{{ project.title }}</h6>
 
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img-top rounded shadow-light-lg" src="{{ asset('/images/pleinair.png') }}" alt="...">
-					</div>
+								<!-- Heading -->
+								<h5 class="mb-0">{{ project.description | striptags }}</h5>
 
-					<!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">Les Films de Plein Air</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">Cahier des charges/HTML/CSS</h4>
-
+							</div>
 						</div>
-					</div>
-				</a>
-
-			</div>
-			<div
-				class="col-12 col-md-4 ux">
-
-				<!-- Card -->
-				<a
-					class="card card-flush mb-7" href="#!">
-
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img-top rounded shadow-light-lg" src="{{ asset('/images/expressfood.png') }}" alt="...">
-					</div>
-
-                    <!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">Express Food</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">Concevez la solution technique d'une application</h4>
-
-						</div>
-					</div>
-				</a>
-
-			</div>
-			<div
-				class="col-12 col-md-4 resources">
-
-				<!-- Card -->
-				<a
-					class="card card-flush mb-7" href="#!">
-
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img-top rounded shadow-light-lg" src="{{ asset('/images/monblog.png') }}" alt="...">
-					</div>
-
-                    <!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">Mon blog</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">PHP / MVC</h4>
-
-						</div>
-					</div>
-				</a>
-
-			</div>
-			<div
-				class="col-12 col-md-4 product">
-
-				<!-- Card -->
-				<a
-					class="card card-flush mb-7" href="#!">
-
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img-top rounded shadow-light-lg" src="{{ asset('/images/snowtricks.png') }}" alt="...">
-					</div>
-
-                    <!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">SnowTricks</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">ite communautaire Symfony</h4>
-
-						</div>
-					</div>
-				</a>
-
-			</div>
-			<div
-				class="col-12 col-md-4 resources">
-
-				<!-- Card -->
-				<a
-					class="card card-flush mb-7" href="#!">
-
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img-top rounded shadow-light-lg" src="{{ asset('/images/bilemo.png') }}" alt="...">
-					</div>
-
-                    <!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">Bilemo</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">Web Service API REST</h4>
-
-						</div>
-					</div>
-				</a>
-
-			</div>
-			<div
-				class="col-12 col-md-4 product">
-
-				<!-- Card -->
-				<a
-					class="card card-flush mb-7" href="#!">
-
-					<!-- Image -->
-					<div class="card-zoom">
-						<img class="card-img-top rounded shadow-light-lg" src="{{ asset('/images/todo.png') }}" alt="...">
-					</div>
-
-                    <!-- Overlay -->
-					<div class="card-img-overlay card-img-overlay-hover">
-						<div
-							class="card-body bg-white">
-
-							<!-- Preheading -->
-							<h6 class="text-uppercase mb-1 text-muted">Todo & Co</h6>
-
-							<!-- Heading -->
-							<h4 class="mb-0">Améliorez une application symfony existante</h4>
-
-						</div>
-					</div>
-				</a>
-
-			</div>
-
+					</a>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

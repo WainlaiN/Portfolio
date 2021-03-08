@@ -4,20 +4,12 @@ namespace App\DataFixtures;
 
 use App\Entity\Skill;
 use App\Entity\User;
-use App\Repository\UserRepository;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 class SkillFixtures extends Fixture implements DependentFixtureInterface
-{
-    private UserRepository $repo;
-
-    public function __construct(UserRepository $repo)
-    {
-        $this->repo = $repo;
-    }
-    
+{    
     public function load(ObjectManager $manager)
     {
         $user = $this->getReference(User::class);
