@@ -6,7 +6,7 @@
 		<!-- Headin -->
 		<h1 class="display-4 fw-bold text-center">Mes Projets</h1>
 		<p class="lead text-secondary mb-4">We design & build products, tools, apps, and sites for companies trying to do great things for our
-																							                    planet.</p>
+		planet.</p>
 	</div>
 
 
@@ -20,11 +20,11 @@
 
 						<!-- Card -->
 						<a
-							class="card shadow-light-lg" href="{{ project.url }}">
+							class="card shadow-light-lg lift lift-lg" href="{{ project.url }}">
 
 							<!-- Image -->
 							<div class="card-zoom">
-								<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('thumbnail') }}" alt="{{ project.title }}">
+								<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }}" alt="{{ project.title }}">
 							</div>
 
 							<!-- Overlay -->
