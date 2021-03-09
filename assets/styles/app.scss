@@ -4,3 +4,27 @@
 @import "./_portfolio.scss";
 @import "./_skill.scss";
 @import "./_resume.scss";
+
+
+.section-title h1::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 120px;
+	height: 1px;
+	background: #ddd;
+	bottom: -30px;
+	left: calc(50% - 60px);
+}
+
+
+.section-title h1::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 3px;
+	background: #0563bb;
+	bottom: -30px;
+	left: calc(50% - 20px);
+}
