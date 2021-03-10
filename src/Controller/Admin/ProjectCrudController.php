@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -29,7 +30,9 @@ class ProjectCrudController extends AbstractCrudController
             Field::new('imageFile')
                 ->setFormType(VichImageType::class)
                 ->setLabel('Image'),
-            DateField::new('updatedAt')
+            DateField::new('updatedAt'),
+            TextField::new('slug'),
+            UrlField::new('url')
         ];
     }
 }

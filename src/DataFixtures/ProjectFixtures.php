@@ -18,49 +18,62 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         $project = new Project();
         $project->setTitle("Chalets & Caviar")
             ->setDescription("Wordpress CMS")
-            ->setUser($user);
+            ->setUser($user)
+            ->setUrl("http://chalet.nicodev.ovh/")
+            ->setImage("chalets.png");
 
         $manager->persist($project);
 
         $project = new Project();
         $project->setTitle("Les Films de plein Air")
             ->setDescription("Cahier des charges / HTML / CSS")
-            ->setUser($user);
+            ->setUser($user)
+            ->setUrl("http://pleinair.nicodev.ovh/")
+            ->setImage("pleinair.png");
 
         $manager->persist($project);
 
         $project = new Project();
         $project->setTitle("Express Food")
             ->setDescription("Solution technique d'une application")
-            ->setUser($user);
+            ->setUser($user)
+            ->setImage("expressfood.png");
 
         $manager->persist($project);
 
         $project = new Project();
         $project->setTitle("Mon Blog")
             ->setDescription("PHP / MVC")
-            ->setUser($user);
+            ->setUser($user)
+            ->setUrl("http://monblog.nicodev.ovh/")
+            ->setImage("monblog.png");
 
         $manager->persist($project);
 
         $project = new Project();
         $project->setTitle("SnowTricks")
             ->setDescription("Site communautaire sous Symfony")
-            ->setUser($user);
+            ->setUser($user)
+            ->setUrl("http://snowtricks.nicodev.ovh/")
+            ->setImage("snowtricks.png");
 
         $manager->persist($project);
 
         $project = new Project();
         $project->setTitle("Bilemo")
             ->setDescription("Web Service API REST")
-            ->setUser($user);
+            ->setUser($user)
+            ->setUrl("bilemo.nicodev.ovh/api/doc")
+            ->setImage("bilemo.png");
 
         $manager->persist($project);
 
         $project = new Project();
         $project->setTitle("Todo & Co")
             ->setDescription("Améliorez une application symfony existante")
-            ->setUser($user);
+            ->setUser($user)
+            ->setUrl("todo.nicodev.ovh/api/doc")
+            ->setImage("todo.png");
 
         $manager->persist($project);
 
