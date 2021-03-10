@@ -12,8 +12,8 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class EasyAdminSubscriber implements EventSubscriberInterface
 {
 
-    private $entityManager;
-    private $passwordEncoder;
+    private EntityManagerInterface $entityManager;
+    private UserPasswordEncoderInterface $passwordEncoder;
 
     public function __construct(EntityManagerInterface $entityManager, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -21,7 +21,7 @@ class EasyAdminSubscriber implements EventSubscriberInterface
         $this->passwordEncoder = $passwordEncoder;
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             BeforeEntityPersistedEvent::class => ['addUser'],

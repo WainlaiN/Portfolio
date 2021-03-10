@@ -12,6 +12,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
+        /** @var User $user */
         $user = $this->getReference(User::class);
 
         $project = new Project();
@@ -66,7 +67,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         $manager->flush();
     }
 
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [UserFixtures::class];
     }
