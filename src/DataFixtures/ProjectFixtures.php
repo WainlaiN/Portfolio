@@ -63,7 +63,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         $project->setTitle("Bilemo")
             ->setDescription("Web Service API REST")
             ->setUser($user)
-            ->setUrl("bilemo.nicodev.ovh/api/doc")
+            ->setUrl("http://bilemo.nicodev.ovh/api/doc")
             ->setImage("bilemo.png");
 
         $manager->persist($project);
@@ -72,7 +72,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         $project->setTitle("Todo & Co")
             ->setDescription("Améliorez une application symfony existante")
             ->setUser($user)
-            ->setUrl("todo.nicodev.ovh/api/doc")
+            ->setUrl("http://todo.nicodev.ovh/api/doc")
             ->setImage("todo.png");
 
         $manager->persist($project);
