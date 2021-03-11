@@ -6,10 +6,11 @@
     <!-- CONTENT -->
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-12 col-md-4 position-md-sticky d-flex align-items-center vh-md-100" style="top: 0;">
+            {# <div class="col-12 col-md-4 position-md-sticky d-flex align-items-center vh-md-100" style="top: 0;"> #}
+            <div class="col-12 col-md-4">
 
                 <!-- Sidebar -->
-                <aside class="py-8 py-md-10">
+                <div class="py-md-12">
                     <!-- Brand -->
                     <div class="img-fluid mb-4 text-body svg-shim" style="max-width: 140px;">
                         {{ project.title }}
@@ -21,6 +22,15 @@
 
                     <!-- List group -->
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+
+                            <!-- Heading -->
+                            <h6 class="d-flex mb-0">
+                                URL
+                                <span class="ms-auto"><a href="{{ project.url }}">{{ project.url }}</a></span>
+                            </h6>
+
+                        </li>
                         <li class="list-group-item">
 
                             <!-- Heading -->
@@ -46,11 +56,10 @@
 
                         </li>
                     </ul>
-
-                </aside>
+                </div>
 
             </div>
-            <div class="col-10 col-md-7">
+            <div class="col-10 col-md-8">
 
                 <!-- Images -->
                 <section class="pb-8 pt-md-12 pb-md-10">
@@ -62,7 +71,7 @@
         </div>
         <!-- URL -->
         <p class="fs-lg mb-7 text-muted">
-            <a href="{{ project.url }}">{{ project.url }}
+            <a href="{{ project.url }}">{{ project.url }}</a>
         </p>
 
     </div>
