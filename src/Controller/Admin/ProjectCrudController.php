@@ -26,7 +26,8 @@ class ProjectCrudController extends AbstractCrudController
         return [
             IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('description'),
+            TextEditorField::new('content'),
             Field::new('imageFile')
                 ->setFormType(VichImageType::class)
                 ->setLabel('Image'),

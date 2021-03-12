@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProjectController!{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
     <!-- CONTENT -->
@@ -69,7 +69,15 @@
                 </section>
             </div>
         </div>
+
+        <!-- Content -->
+        <div>
+            <h2>Description du projet:</h2>
+            {{ project.content | raw }}
+        </div>
     </div>
+
+
 
 
     <!-- SHAPE -->

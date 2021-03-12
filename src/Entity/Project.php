@@ -33,6 +33,11 @@ class Project
     private $description;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $content;
+
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
@@ -188,5 +193,21 @@ class Project
         $this->slug = $slug;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param mixed $content
+     */
+    public function setContent($content): void
+    {
+        $this->content = $content;
     }
 }
