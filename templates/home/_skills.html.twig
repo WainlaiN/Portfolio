@@ -1,40 +1,41 @@
-<div class="container mt-10" id="skills">
+<section class="section-bg" id="skills">
+    <div class="container">
 
-    <div
-            class="section-title mb-5">
-        <!-- Headin -->
-        <h1 class="display-4 fw-bold text-center">Mes Compétences</h1>
-        <!-- Text -->
-        <p class="lead text-secondary mb-4">Voici les principales compétences professionnelles que j'ai acquis pendant
-            ma formation chez OCS en tant que développeur PHP / Symfony.
-            J'ai également acquis quelques compétences en tant qu'AdminSys/DevOps débutant grâce à mon emploi actuel.
-        </p>
-    </div>
+        <div
+                class="section-title mb-5">
+            <!-- Headin -->
+            <h1 class="display-4 fw-bold">Mes Compétences</h1>
+            <!-- Text -->
+            <p class="lead text-secondary mb-4">Voici les principales compétences professionnelles que j'ai acquis pendant
+                ma formation chez OCS en tant que développeur PHP / Symfony.
+                J'ai également acquis quelques compétences en tant qu'AdminSys/DevOps débutant grâce à mon emploi actuel.
+            </p>
+        </div>
 
-    <div
-            class="row skills-content">
+        <div
+                class="row skills-content">
 
-        {# <div class="col-lg-6"> #}
+            {# <div class="col-lg-6"> #}
 
-        {% for skill in skills %}
+            {% for skill in skills %}
 
 
-            <div class="col-12 col-md-6 product mb-1">
-                <p class="skill">{{ skill.title }}
-                    <i class="val">{{ skill.percentage }}%</i>
-                </p>
-                <div class="progress mb-1">
-                    <div class="progress-bar" data-aos="fade-right" role="progressbar"
-                         style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0"
-                         aria-valuemax="100"></div>
+                <div class="col-12 col-md-6 product mb-1">
+                    <p class="skill">{{ skill.title }}
+                        <i class="val">{{ skill.percentage }}%</i>
+                    </p>
+                    <div class="progress mb-1">
+                        <div class="progress-bar" data-aos="fade-right" role="progressbar"
+                             style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0"
+                             aria-valuemax="100"></div>
+                    </div>
+
                 </div>
 
-            </div>
 
+            {% endfor %}
 
-        {% endfor %}
-
-        {# <div class="card-body">
+            {# <div class="card-body">
 										HTML5
 										<div class="progress mb-3">
 											<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
@@ -64,6 +65,7 @@
 									</div> #}
 
 
+        </div>
     </div>
 
-</div></div>
+</section>
