@@ -4,6 +4,8 @@
 @import "./_portfolio.scss";
 @import "./_skill.scss";
 @import "./_resume.scss";
+@import "./_top.scss";
+
 
 
 .section-title h1::before {
@@ -27,4 +29,12 @@
 	background: #0563bb;
 	bottom: -30px;
 	left: calc(50% - 20px);
+}
+
+body {
+	font-family: HKGroteskPro, serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
 }

@@ -1,6 +1,6 @@
 <!-- WELCOME -->
 
-<div class="container mt-10" id="projects">
+<div class="container mt-10 shadow-lg" id="projects">
 	<div
 			class="section-title">
 		<!-- Headin -->
@@ -12,41 +12,48 @@
 
 
 	<!-- CONTENT -->
-	{# <section class="py-8 py-md-5">
+	<section class="py-8 py-md-5">
 		<div class="container">
-			<div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'> #}
-
-	{# <div
+			<div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
+				{% for project in projects %}
+				<div
 						class="col-12 col-md-4 product mb-4">
 
-						<!-- Card -->
-						<a
+					<!-- Card -->
+					<a
 							class="card shadow-light-lg lift lift-lg" href="{{ path('project_show', { 'slug': project.slug }) }}">
 
-							<!-- Image -->
-							<div class="card-zoom">
-								<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }}" alt="{{ project.title }}">
-							</div>
+						<!-- Image -->
+						<div class="card-zoom">
+							<img class="card-img" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }}" alt="{{ project.title }}">
+						</div>
 
-							<!-- Overlay -->
-							<div class="card-img-overlay card-img-overlay-hover">
-								<div
+						<!-- Overlay -->
+						<div class="card-img-overlay card-img-overlay-hover">
+							<div
 									class="card-body bg-white">
 
-									<!-- Preheading -->
-									<h6 class="text-uppercase mb-1 text-muted">{{ project.title }}</h6>
+								<!-- Preheading -->
+								<h6 class="text-uppercase mb-1 text-muted">{{ project.title }}</h6>
 
-									<!-- Heading -->
-									<h5 class="mb-0">{{ project.description | striptags }}</h5>
+								<!-- Heading -->
+								<h5 class="mb-0">{{ project.description | striptags }}</h5>
 
-								</div>
 							</div>
-						</a>
-					</div> #}
+						</div>
+					</a>
 
-	<!-- ARTICLES -->
-	<!-- Card -->
-	<section class="">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<!-- ARTICLES -->
+<!-- Card -->
+{# <section class="">
 		<div class="container">
 			<div class="row">
 				{% for project in projects %}
@@ -119,3 +126,4 @@
 		</div>
 	</section>
 </div>
+ #}
