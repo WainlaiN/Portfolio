@@ -7,7 +7,7 @@ liip_imagine:
             quality: 100
             filters:
                 thumbnail:
-                    size: [306, 250]
+                    size: [500, 500]
                     mode: outbound
         project_page:
             quality: 100
