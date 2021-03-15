@@ -16,12 +16,30 @@
 
 body {
 	font-family: HKGroteskPro, serif;
-	background-color: white;
-	//background-image: url("../img/covers/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg");
+	background-color: #121419;
+	//background-image: url("../img/covers/wallpapertip_web-design-wallpaper_838362.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	//color: white;
 	//opacity: .8;
+}
+
+.section-background {
+	//background-color: #121419;
+	background-color: #162129;
+
+}
+
+.border-xl {
+	//border: 10px solid #4b505b !important;
+}
+
+.shadow-grey {
+ 	text-shadow: 3px 3px 3px #5a5b5d;
+}
+
+.shadow-black {
+	text-shadow: 1px 1px 2px #5a5b5d;
 }
