@@ -6,6 +6,22 @@
 @import "./_skill.scss";
 @import "./_resume.scss";
 
+@font-face {
+	font-family: "FiraCodeBold";
+	src: url("../fonts/FiraCode/FiraCode-Bold.woff2") format("woff2"),
+	url("../fonts/FiraCode/FiraCode-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: "FiraCodeLight";
+	src: url("../fonts/FiraCode/FiraCode-Light.woff2") format("woff2"),
+	url("../fonts/FiraCode/FiraCode-Light.woff") format("woff");
+}
+@font-face {
+	font-family: "FiraCodeRegular";
+	src: url("../fonts/FiraCode/FiraCode-Regular.woff2") format("woff2"),
+	url("../fonts/FiraCode/FiraCode-Regular.woff") format("woff");
+}
+
 .navbar-dark .navbar-nav .nav-link {
 	color: #fff;
 }
@@ -15,7 +31,7 @@
 }
 
 body {
-	font-family: HKGroteskPro, serif;
+	font-family: "FiraCodeRegular", serif;
 	background-color: #121419;
 	//background-image: url("../img/covers/wallpapertip_web-design-wallpaper_838362.jpg");
 	background-attachment: fixed;
