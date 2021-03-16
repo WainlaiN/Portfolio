@@ -1,4 +1,4 @@
-<div class="container-fluid section-background p-4 text-white overlay overlay-primary overlay-10" id="projects">
+<div class="container p-4 text-white" id="projects">
 
 	<!-- ARTICLES -->
 	<section class="pt-7 pt-md-10">
@@ -8,14 +8,13 @@
 				<!-- Heading -->
 				<h1 class="display-4 text-center text-warning">Mes Projets</h1>
 				<!-- Text -->
-				<h5 class="text-center">Voici la liste des projets que j'ai eu à valider durant ma formation chez OCS.
-				</h5>
+				<h6 class="text-center">Voici la liste des projets que j'ai eu à valider durant ma formation chez OCS.
+				</h6>
 			</div>
 
 			<div class="row">
 				{% for project in projects %}
 					<div class="col-12 col-md-6 col-lg-4 d-flex mb-5">
-
 
 						<!-- Card -->
 						<div class="card mb-6 mb-xl-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg" style="background-image: url({{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }});">
@@ -24,40 +23,15 @@
 							<a class="card-body mt-auto" href="{{ path('project_show', { 'slug': project.slug }) }}">
 
 								<!-- Heading -->
-								<h3 class="text-white">
+								<h5 class="text-white fw-bold">
 									{{ project.title }}
-								</h3>
+								</h5>
 
 								<!-- Text -->
 								<p class="mb-0 text-white">
 									{{ project.description | striptags }}
 								</p>
-
 							</a>
-
-							<!-- Meta -->
-							<a class="card-meta" href="#!">
-
-								<!-- Divider -->
-								<hr class="card-meta-divider border-white-20">
-
-								<!-- Avatar -->
-								<div class="avatar avatar-sm mr-2">
-									<img src="../assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-								</div>
-
-								<!-- Author -->
-								<h6 class="text-uppercase text-white-80 mr-2 mb-0">
-									Casey Fyfe
-								</h6>
-
-								<!-- Date -->
-								<p class="h6 text-uppercase text-white-80 mb-0 ml-auto">
-									<time datetime="2019-05-02">May 02</time>
-								</p>
-
-							</a>
-
 						</div>
 
 					</div>
