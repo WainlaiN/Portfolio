@@ -1,6 +1,7 @@
 {# <section data-jarallax data-speed=".8" style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})"> #}
 
-<section style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})">
+<section class="" style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})">
+
 	<div class="container">
 
 		{% include 'home/_modal.html.twig' %}
@@ -17,6 +18,7 @@
 					<h2 class="text-white">Developpeur <span class="text-warning" data-typed='{"strings": ["Web", "PHP/Symfony", "Back-End"]}'></span></h2>
 
 					<button class="btn btn-warning" data-toggle="modal" data-target="#modalExample">About Me</button>
+					<a href="#myModal" class="btn btn-warning" data-toggle="modal" data-target="#modalExample">About Me</a>
 
 					<!-- Social -->
 					<ul class="list-unstyled list-inline list-social mb-6 mb-md-0 mt-3" id="inline-social">
@@ -52,11 +54,3 @@
 		</div> <!-- / .row -->
 	</div>
 </section>
-
-{% block javascripts %}
-<script>
-	$('#myModal').on('shown.bs.modal', function () {
-		$('#myInput').trigger('focus')
-	})
-</script>
-{% endblock %}
