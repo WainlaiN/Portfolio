@@ -23,6 +23,7 @@ function overflowShow() {
 
 modals.forEach(function(modal) {
   modal.addEventListener('show.bs.modal', function() {
+    console.log("test")
     overflowHide();
   });
 

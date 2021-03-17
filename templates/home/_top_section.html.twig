@@ -1,6 +1,9 @@
-<!-- WELCOME -->
-<section class="data-jarallax data-speed=".8" style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})">
+{# <section data-jarallax data-speed=".8" style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})"> #}
+
+<section style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})">
 	<div class="container">
+
+		{% include 'home/_modal.html.twig' %}
 		<div class="row min-vh-100 py-8 py-md-11">
 			<div class="col-12 col-md-8 col-lg-12 mt-auto">
 
@@ -11,13 +14,12 @@
 
 					<h1 class="fw-bold text-white" id="welcomeHeadingSource">
 						Nicolas Dupriez</h1>
-						<h2 class="text-white">Developpeur <span class="text-warning" data-typed='{"strings": ["Web", "PHP/Symfony", "Back-End"]}'></span></h2>
+					<h2 class="text-white">Developpeur <span class="text-warning" data-typed='{"strings": ["Web", "PHP/Symfony", "Back-End"]}'></span></h2>
 
-					<hr class="hr-md my-6 my-md-8 bg-warning">
-
+					<button class="btn btn-warning" data-toggle="modal" data-target="#modalExample">About Me</button>
 
 					<!-- Social -->
-					<ul class="list-unstyled list-inline list-social mb-6 mb-md-0 mt-3">
+					<ul class="list-unstyled list-inline list-social mb-6 mb-md-0 mt-3" id="inline-social">
 						<li class="list-inline-item list-social-item me-3">
 							<a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
 						</li>
@@ -31,9 +33,13 @@
 							<a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
 						</li>
 					</ul>
+
+					<hr class="hr-md my-6 my-md-8 bg-warning">
+
 				</div>
 
 			</div>
+
 			<div class="col-12 mt-auto text-center">
 
 				<!-- Button -->
@@ -44,5 +50,13 @@
 
 			</div>
 		</div> <!-- / .row -->
-	</div> <!-- / .container -->
+	</div>
 </section>
+
+{% block javascripts %}
+<script>
+	$('#myModal').on('shown.bs.modal', function () {
+		$('#myInput').trigger('focus')
+	})
+</script>
+{% endblock %}

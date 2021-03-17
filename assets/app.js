@@ -9,6 +9,9 @@
 import './styles/app.scss';
 
 // You can specify which plugins you need
+
+//import $ from 'jquery';
+//global.$ = global.jQuery = $;
 import { Tooltip, Toast, Popover } from 'bootstrap';
 
 import './js/theme';
@@ -19,3 +22,4 @@ import './bootstrap';
 
 require('@fortawesome/fontawesome-free/css/all.min.css');
 require('@fortawesome/fontawesome-free/js/all.js');
+require('../assets/js/modal.js');
