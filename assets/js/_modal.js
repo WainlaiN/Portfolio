@@ -11,7 +11,7 @@ myInput.addEventListener('click', function () {
     myModal.toggle()
 })
 
-document.getElementById("btnClose").addEventListener("click", function () {
+document.getElementById("myModal").addEventListener("click", function () {
     myModal.hide();
 });
 
