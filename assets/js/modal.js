@@ -3,6 +3,9 @@
 // Theme module
 //
 
+window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+
+
 const modals = document.querySelectorAll('.modal');
 
 function getScrollbarWidth() {
@@ -23,7 +26,6 @@ function overflowShow() {
 
 modals.forEach(function(modal) {
   modal.addEventListener('show.bs.modal', function() {
-    console.log("test")
     overflowHide();
   });
 
