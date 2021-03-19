@@ -1,7 +1,7 @@
-<div class="container p-4 text-white" id="projects">
+<div class="container-fuild p-4 text-white overlay overlay-white overlay-10" id="projects">
 
 	<!-- ARTICLES -->
-	<section>
+	<div class="container col-lg-6">
 		<div class="container">
 
 			<div class="section-title mb-5">
@@ -14,10 +14,10 @@
 
 			<div class="row">
 				{% for project in projects %}
-					<div class="col-12 col-md-6 col-lg-4 d-flex mb-5">
+					{# <div class="col-12 col-md-6 col-lg-4 d-flex mb-5">
 
 						<!-- Card -->
-						<div class="card mb-6 mb-xl-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg" style="background-image: url({{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }});">
+						<div class="card mb-6 mb-xl-0 pt-14 overlay overlay-black overlay-30 bg-cover lift" style="background-image: url({{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }});">
 
 							<!-- Body -->
 							<a class="card-body mt-auto" href="{{ path('project_show', { 'slug': project.slug }) }}">
@@ -34,9 +34,64 @@
 							</a>
 						</div>
 
+					</div> #}
+					<div class="col-12 col-md-6 col-lg-4 d-flex">
+
+					<!-- Card -->
+					<div class="card mb-6 shadow-dark-lg lift lift-lg">
+
+						<!-- Image -->
+						<a class="card-img-top" href="{{ path('project_show', { 'slug': project.slug }) }}">
+
+							<!-- Image -->
+							<img src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }}" alt="..." class="card-img-top">
+
+							<!-- Shape -->
+							<div class="position-relative">
+								<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+									<svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
+							</div>
+
+						</a>
+
+						<!-- Body -->
+						<a class="card-body" href="#!">
+
+							<!-- Heading -->
+							<h3 class="text-dark">
+								{{ project.title }}
+							</h3>
+
+							<!-- Text -->
+							<p class="mb-0 text-muted">
+								{{ project.description | striptags }}
+							</p>
+
+						</a>
+
+						<!-- Meta -->
+						<a class="card-meta mt-auto" href="#!">
+
+							<!-- Divider -->
+							<hr class="card-meta-divider">
+
+
+							<!-- Author -->
+							<h6 class="text-uppercase text-muted me-2 mb-0">
+								{{ project.user.prenom }}
+							</h6>
+
+							<!-- Date -->
+							<p class="h6 text-uppercase text-muted mb-0 ms-auto">
+								<time datetime="2019-05-02">{{ project.updatedAt | date('d/m/Y') }}</time>
+							</p>
+
+						</a>
+
+					</div>
 					</div>
 				{% endfor %}
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
