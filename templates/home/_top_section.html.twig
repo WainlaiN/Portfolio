@@ -4,9 +4,23 @@
 
 	<div class="container">
 
+		<div class="row">
+			<!-- Flash Message -->
+			{% for message in app.flashes('danger') %}
+				<div class="alert alert-danger">
+					{{ message }}
+				</div>
+			{% endfor %}
+			{% for message in app.flashes('success') %}
+				<div class="alert alert-success">
+					{{ message }}
+				</div>
+			{% endfor %}
+		</div>
 
 		<div class="row min-vh-100 py-8 py-md-11">
 			<div class="col-12 col-md-8 col-lg-12 mt-auto">
+
 
 				<!-- Brand -->
 				<div class="col-12 col-md-8 col-lg-10 pl-10" data-aos="fade-right">
