@@ -39,7 +39,8 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $mailer->setMessage($message->getName(),
+            $mailer->setMessage(
+                $message->getName(),
                 $this->renderView(
                     'email/contact.html.twig',
                     [
