@@ -40,6 +40,9 @@ class Mailer
 
     private function sendEmail($email)
     {
+        try {
             $this->mailer->send($email);
+        } catch (TransportExceptionInterface $e) {
+        }
     }
 }

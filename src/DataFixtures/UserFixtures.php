@@ -21,10 +21,10 @@ class UserFixtures extends Fixture
     {
         //create User to access EasyAdmin
         $user = new User();
-        $user->setEmail("nicodupriez@hotmail.com")
+        $user->setEmail("admin@gmail.com")
             ->setPassword($this->encoder->encodePassword($user, "admin"))
-            ->setPrenom("nicolas")
-            ->setNom("dupriez");
+            ->setPrenom("admin")
+            ->setNom("admin");
 
         $manager->persist($user);
 
