@@ -5,14 +5,13 @@
 {% block body %}
     <!-- CONTENT -->
     <div class="container text-white section-background">
-        <div class="row justify-content-between col-lg-8 mx-auto">
-            {# <div class="col-12 col-md-4 position-md-sticky d-flex align-items-center vh-md-100" style="top: 0;"> #}
-            <div class="col-12 col-md-4">
+        <div class="row">
+            <div class="col-6 col-md-6">
 
                 <!-- Sidebar -->
                 <div class="py-md-12">
                     <!-- Brand -->
-                    <div class="img-fluid mb-4 text-body svg-shim" style="max-width: 140px;">
+                    <div class="img-fluid mb-4 svg-shim">
                         {{ project.title }}
                     </div>
                     <!-- Text -->
@@ -20,46 +19,14 @@
                         {{ project.description |  striptags }}
                     </p>
 
-                    <!-- List group -->
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-
-                            <!-- Heading -->
-                            <h6 class="d-flex mb-0">
-                                URL
-                                <span class="ms-auto"><a href="{{ project.url }}">{{ project.url }}</a></span>
-                            </h6>
-
-                        </li>
-                        <li class="list-group-item">
-
-                            <!-- Heading -->
-                            <h6 class="d-flex mb-0 text-uppercase">
-                                Year <span class="ms-auto">2019</span>
-                            </h6>
-
-                        </li>
-                        <li class="list-group-item">
-
-                            <!-- Heading -->
-                            <h6 class="d-flex mb-0 text-uppercase">
-                                Service <span class="ms-auto">Photography</span>
-                            </h6>
-
-                        </li>
-                        <li class="list-group-item">
-
-                            <!-- Heading -->
-                            <h6 class="d-flex mb-0 text-uppercase">
-                                Timeline <span class="ms-auto">60 Days</span>
-                            </h6>
-
-                        </li>
-                    </ul>
+                    <!-- Heading -->
+                    <h6>
+                        <span class="ms-auto"><a href="{{ project.url }}">{{ project.url }}</a></span>
+                    </h6>
                 </div>
 
             </div>
-            <div class="col-10 col-md-8">
+            <div class="col-6 col-md-6">
 
                 <!-- Images -->
                 <section class="pb-8 pt-md-12 pb-md-10">
