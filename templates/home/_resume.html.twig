@@ -1,115 +1,117 @@
-<div class="container mt-10 shadow-lg p-4 overlay overlay-white overlay-70" id="about">
+<div class="container-fluid p-2 text-white" id="resume">
 
+	<div class="col-lg-6 mx-auto">
 
-<div
-		class="section-title mb-5">
-		<!-- Headin -->
-		<h1 class="display-4 fw-bold text-center">Mon Parcours</h1>
+		<!-- Heading -->
+		<div class="section-title mb-5">
+			<!-- Heading -->
+			<h1 class="text-center text-warning fw-bold"># Mon Parcours</h1>
+		</div>
 
-	</div>
-
-	<div class="row">
-		<div
-			class="col-lg-6">
-			<h3 class="resume-title" data-aos="fade-right">Education</h3>
-			<div class="resume-item" data-aos="fade-right">
-				<h4>Développeur d'application PHP / Symfony - 2021</h4>
-				<h5>2019 - 2021</h5>
-				<p>
-					<em>Openclassrooms</em>
-				</p>
-				<ul>
-					<li>Analyser les besoins à partir du cahier des charges défini par le client ou le chef de projet</li>
-					<li>Définir les différentes étapes de fonctionnement de l’application</li>
-					<li>Réaliser des tests unitaires et fonctionnels</li>
-					<li>Assurer le support technique du site</li>
-					<li>Produire une documentation technique et fonctionnelle du sitepour le client</li>
-					<li>Apporter d’éventuelles corrections de bugs et effectuer des mises à jour</li>
-				</ul>
+		<!-- Content -->
+		<div class="row">
+			<div
+					class="col-lg-6">
+				<h3 class="resume-title text-center fw-bold" data-aos="fade-right">Education</h3>
+				<div class="resume-item" data-aos="fade-right">
+					<h4>Développeur d'application PHP / Symfony - 2021</h4>
+					<h5 class="bg-dark">2019 - 2021</h5>
+					<p>
+						<em>Openclassrooms / RNCP 2</em>
+					</p>
+					<ul>
+						<li>Analyser les besoins à partir du cahier des charges défini par le client ou le chef de projet</li>
+						<li>Définir les différentes étapes de fonctionnement de l’application</li>
+						<li>Réaliser des tests unitaires et fonctionnels</li>
+						<li>Assurer le support technique du site</li>
+						<li>Produire une documentation technique et fonctionnelle du sitepour le client</li>
+						<li>Apporter d’éventuelles corrections de bugs et effectuer des mises à jour</li>
+					</ul>
+				</div>
+				<div class="resume-item" data-aos="fade-right">
+					<h4>BTS Informatique Option Développeur d'Applications</h4>
+					<h5 class="bg-dark">2006</h5>
+					<p>
+						<em>Lycée André Malraux Béthune</em>
+					</p>
+					<ul>
+						<li>Concevoir et développer des applications informatiques</li>
+						<li>Mettre en oeuvre et maintenir des programmes informatiques qui assurent le fonctionnement des applications</li>
+					</ul>
+				</div>
+				<div class="resume-item" data-aos="fade-right">
+					<h4>DUT Génie des Télécoms et réseaux (1er année)
+					</h4>
+					<h5 class="bg-dark">2004</h5>
+					<p>
+						<em>IUT Béthune</em>
+					</p>
+				</div>
+				<div class="resume-item" data-aos="fade-right">
+					<h4>BAC Scientifique Option Sciences de l'Ingénieur - 2003
+					</h4>
+					<h5 class="bg-dark">2003</h5>
+					<p>
+						<em>Lycée Carnot Arras</em>
+					</p>
+				</div>
 			</div>
-			<div class="resume-item" data-aos="fade-right">
-				<h4>BTS Informatique Option Développeur d'Applications</h4>
-				<h5>2006</h5>
-				<p>
-					<em>Lycée André Malraux Béthune</em>
-				</p>
-				<ul>
-					<li>Concevoir et développer des applications informatiques</li>
-					<li>Mettre en oeuvre et maintenir des programmes informatiques qui assurent le fonctionnement des applications</li>
-				</ul>
-			</div>
-			<div class="resume-item" data-aos="fade-right">
-				<h4>DUT Génie des Télécoms et réseaux (1er année)
-				</h4>
-				<h5>2004</h5>
-				<p>
-					<em>IUT Béthune</em>
-				</p>
-			</div>
-			<div class="resume-item" data-aos="fade-right">
-				<h4>BAC Scientifique Option Sciences de l'Ingénieur - 2003
-				</h4>
-				<h5>2003</h5>
-				<p>
-					<em>Lycée Carnot Arras</em>
-				</p>
+			<div class="col-lg-6">
+				<h3 class="resume-title text-center fw-bold" data-aos="fade-left">Professional Experience</h3>
+				<div class="resume-item" data-aos="fade-left">
+					<h4>Tech Manager - Développeur PHP Symfony
+					</h4>
+					<h5 class="bg-dark">2019 - Present</h5>
+					<p>
+						<img src="{{ asset('images/shopbot-icon.svg') }}" class="list-social-icon" alt="..."/>
+						<em> Shopbot YFC
+						</em>
+
+					</p>
+					<ul>
+						<li>Responsable de la maintenance/infrastructure serveurs dédiés OVHcloud</li>
+						<li>Automatisation de la mise en prod via SaltStack
+						</li>
+						<li>Surveillance des piles RabbitMQ / SQS</li>
+						<li>Renouvellement des certificats SSL</li>
+					</ul>
+				</div>
+				<div class="resume-item" data-aos="fade-left">
+					<h4>Datafeed Manager - Content Manager</h4>
+					<h5 class="bg-dark">2015 - 2019</h5>
+					<p>
+						<img src="{{ asset('images/shopbot-icon.svg') }}" class="list-social-icon" alt="..."/>
+						<em> Shopbot YFC</em>
+					</p>
+					<ul>
+						<li>Responsable de la configuration des flux marchands</li>
+						<li>Responsable du contenu produits/offres</li>
+						<li>Support technique</li>
+					</ul>
+				</div>
+				<div class="resume-item" data-aos="fade-left">
+					<h4>Infomédiaire</h4>
+					<h5 class="bg-dark">2007 - 2015</h5>
+					<p>
+						<img src="{{ asset('images/shopbot-icon.svg') }}" class="list-social-icon" alt="..."/>
+						<em> Shopbot YFC</em>
+					</p>
+					<ul>
+						<li>Mise en place de contenu sur le comparateur</li>
+					</ul>
+				</div>
+				<div class="resume-item" data-aos="fade-left">
+					<h4>Stage - eCommerce</h4>
+					<h5 class="bg-dark">2006</h5>
+					<p>
+						<em>DECIMA</em>
+					</p>
+					<ul>
+						<li>Développement du site d'eCommerce</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="col-lg-6">
-			<h3 class="resume-title" data-aos="fade-left">Professional Experience</h3>
-			<div class="resume-item" data-aos="fade-left">
-				<h4>Tech Manager - Développeur PHP Symfony
-				</h4>
-				<h5>2019 - Present</h5>
-				<p>
-					<img src="{{ asset('images/shopbot-icon.svg') }}" class="list-social-icon" alt="..."/>
-					<em> Shopbot YFC
-					</em>
-
-				</p>
-				<ul>
-					<li>Responsable de la maintenance/infrastructure serveurs dédiés OVHcloud</li>
-					<li>Automatisation de la mise en prod via SaltStack
-					</li>
-					<li>Surveillance des piles RabbitMQ / SQS</li>
-					<li>Renouvellement des certificats SSL</li>
-				</ul>
-			</div>
-			<div class="resume-item" data-aos="fade-left">
-				<h4>Datafeed Manager - Content Manager</h4>
-				<h5>2015 - 2019</h5>
-				<p>
-					<img src="{{ asset('images/shopbot-icon.svg') }}" class="list-social-icon" alt="..."/>
-					<em> Shopbot YFC</em>
-				</p>
-				<ul>
-					<li>Responsable de la configuration des flux marchands</li>
-					<li>Responsable du contenu produits/offres</li>
-					<li>Support technique</li>
-				</ul>
-			</div>
-			<div class="resume-item" data-aos="fade-left">
-				<h4>Infomédiaire</h4>
-				<h5>2007 - 2015</h5>
-				<p>
-					<img src="{{ asset('images/shopbot-icon.svg') }}" class="list-social-icon" alt="..."/>
-					<em> Shopbot YFC</em>
-				</p>
-				<ul>
-					<li>Mise en place de contenu sur le comparateur</li>
-				</ul>
-			</div>
-			<div class="resume-item" data-aos="fade-left">
-				<h4>Stage - eCommerce</h4>
-				<h5>2006</h5>
-				<p>
-					<em>DECIMA</em>
-				</p>
-				<ul>
-					<li>Développement du site d'eCommerce</li>
-				</ul>
-			</div>
-		</div>
 	</div>
-
+	<hr class="hr-sm my-6 my-md-8 mx-auto bg-warning">
 </div>

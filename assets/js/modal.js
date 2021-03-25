@@ -3,6 +3,9 @@
 // Theme module
 //
 
+window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+
+
 const modals = document.querySelectorAll('.modal');
 
 function getScrollbarWidth() {

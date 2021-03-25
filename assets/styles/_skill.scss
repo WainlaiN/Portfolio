@@ -1,5 +1,6 @@
 .progress {
-    height: 10px;
+    height: 5px;
+	background-color: darkslategray;
 }
 
 
@@ -15,6 +16,9 @@
 	display: block;
 	font-weight: 700;
 	font-family: "Raleway", sans-serif;
-	color: #3b434a;
 	font-size: 12px;
+}
+
+.progress-bar {
+	background-color: darkorange!important;
 }

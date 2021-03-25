@@ -1,44 +1,57 @@
-<!-- WELCOME -->
-<section class="overlay overlay-dark overlay-40" data-jarallax data-speed=".8" style="background-image: url({{ asset('build/images/covers/michal-kubalczyk-WecngmAT-KY-unsplash.jpg') }})">
+{# <section data-jarallax data-speed=".8" style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})"> #}
+
+<section class="" style="background-image: url({{ asset('build/images/covers/wallpapertip_web-design-wallpaper_838362.jpg') }})">
+
 	<div class="container">
+
+
 		<div class="row min-vh-100 py-8 py-md-11">
-			<div class="col-12 col-md-8 col-lg-12">
+			<div class="col-12 col-md-8 col-lg-12 mt-auto">
 
 				<!-- Brand -->
-				<div class="col-12 col-md-8 col-lg-10 pl-10" data-aos="zoom-in">
+				<div class="col-12 col-md-8 col-lg-10 pl-10" data-aos="fade-right">
 
 					<!-- Heading -->
-					<h1 class="display-6 fw-bold text-white" id="welcomeHeadingSource">
-						Nicolas Dupriez <br />
-						Developpeur <span class="text-warning" data-typed='{"strings": ["Web", "PHP / Symfony", "Back-End"]}'></span>
-					</h1>
+
+					<h1 class="fw-bold text-white" id="welcomeHeadingSource">
+						Nicolas Dupriez</h1>
+					<h2 class="text-white">Developpeur <span class="text-warning" data-typed='{"strings": ["Web", "PHP/Symfony", "Back-End"]}'></span></h2>
+
+					<button class="btn btn-warning fw-bold" data-toggle="modal" data-target="#myModal" id="buttonModal">About Me</button>
 
 					<!-- Social -->
-					<ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+					<ul class="list-unstyled list-inline list-social mb-6 mb-md-0 mt-3" id="inline-social">
 						<li class="list-inline-item list-social-item me-3">
-							<a href="#" class="text-white"><i class="fe fe-twitter" style="width: 200px; height: 200px"></i></a>
+							<a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
 						</li>
 						<li class="list-inline-item list-social-item me-3">
-							<a href="#" class="text-white"><i class="fe fe-github"></i></a>
+							<a href="#" class="text-white"><i class="fab fa-github fa-2x"></i></a>
 						</li>
 						<li class="list-inline-item list-social-item me-3">
-							<a href="#" class="text-white"><i class="fe fe-linkedin"></i></a>
+							<a href="#" class="text-white"><i class="fab fa-gitlab fa-2x"></i></a>
+						</li>
+						<li class="list-inline-item list-social-item me-3">
+							<a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
 						</li>
 					</ul>
 
-
+					<hr class="hr-md my-6 my-md-8 bg-warning">
 
 				</div>
 
 			</div>
+
 			<div class="col-12 mt-auto text-center">
 
 				<!-- Button -->
-				<a class="btn btn-white btn-rounded-circle shadow" data-scroll='{"offset": 0}' href="#about">
-					<i class="fe fe-arrow-down text-warning"></i>
+				<a class="text-warning" data-scroll='{"offset": 0}' href="#skills">
+					{# <i class="fe fe-arrow-down text-warning"></i> #}
+					<i class="fa fa-chevron-down fa-3x"></i>
 				</a>
 
 			</div>
 		</div> <!-- / .row -->
-	</div> <!-- / .container -->
+	</div>
 </section>
+
+{% include 'home/_modal.html.twig' %}

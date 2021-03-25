@@ -1,66 +1,31 @@
-<div class="container mt-10 shadow-lg p-4 overlay overlay-white overlay-60 border-5" id="about">
+<div class="container-fluid p-2 text-white overlay overlay-white overlay-10" id="skills">
 
-<div
-		class="section-title mb-5">
-		<!-- Heading -->
-		<h1 class="display-4 fw-bold text-center">Mes Compétences</h1>
-		<!-- Text -->
-		<h3>Voici les principales compétences professionnelles acquises pendant ma formation chez OCS en tant que développeur PHP / Symfony.
-		J'ai également acquis quelques compétences en tant qu'AdminSys/DevOps débutant grâce à mon emploi actuel.
-		</h3>
-	</div>
+	<div class="col-lg-6 mx-auto">
+		<div class="section-title mb-5">
+			<!-- Heading -->
+			<h1 class="text-center text-warning fw-bold"># Mes Compétences</h1>
+			<!-- Text -->
+			<h6 class="text-center">Voici les principales compétences professionnelles acquises pendant ma formation chez OCS en tant que développeur PHP / Symfony.
+				J'ai également acquis quelques compétences en tant qu'AdminSys/DevOps débutant grâce à mon emploi actuel.
+			</h6>
+		</div>
 
-	<div
-		class="row skills-content">
+		<div class="row skills-content">
 
-		{#<div class="col-lg-6">#}
+			{% for skill in skills %}
 
-		{% for skill in skills %}
+				<div class="col-12 col-md-6 product mb-1">
+					<p class="skill">{{ skill.title }}
+					</p>
+					<div class="progress mb-1 overlay overlay-white overlay-10">
+						<div class="progress-bar" data-aos="fade-right" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 
-
-			<div class="col-12 col-md-6 product mb-1">
-				<p class="skill">{{ skill.title }}
-					<i class="val">{{ skill.percentage }}%</i>
-				</p>
-				<div class="progress mb-1">
-					<div class="progress-bar" data-aos="fade-right" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
 				</div>
+			{% endfor %}
 
-			</div>
-
-
-		{% endfor %}
-
-		{#<div class="card-body">
-										HTML5
-										<div class="progress mb-3">
-											<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
-												aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-										CSS3
-										<div class="progress mb-3">
-											<div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
-												aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-										BOOTSTRAP
-										<div class="progress mb-3">
-											<div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-												aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-										PHP
-										<div class="progress mb-3">
-											<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-												aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-										Symfony
-										<div class="progress mb-3">
-											<div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-												aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-						
-									</div>#}
-
-
+		</div>
 	</div>
+	<hr class="hr-sm my-6 my-md-8 mx-auto bg-warning">
+</div>
 
-</div></div>
