@@ -27,8 +27,8 @@ class HomeController extends AbstractController
         SkillRepository $skillRepo,
         Request $request,
         Mailer $mailer
-    ): Response
-    {
+    ): Response {
+
         $tricks = $projectRepo->findAll();
         $skills = $skillRepo->findAll();
 
@@ -39,7 +39,6 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
             $mailer->setMessage($message->getName(),
                 $this->renderView(
                     'email/contact.html.twig',
@@ -53,8 +52,6 @@ class HomeController extends AbstractController
             );
 
             $this->addFlash('success', 'Votre message a bien été envoyé !');
-
-
         }
 
         return $this->render('home/index.html.twig', [

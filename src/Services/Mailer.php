@@ -26,7 +26,7 @@ class Mailer
     public function setMessage($name, $render, $send = false)
     {
         $email = new Email();
-        $email->subject( "test")
+        $email->subject("test")
             ->from($this->adminEmail)
             ->to($this->adminEmail)
             ->html($render);
@@ -41,7 +41,5 @@ class Mailer
     private function sendEmail($email)
     {
             $this->mailer->send($email);
-
     }
-
 }
