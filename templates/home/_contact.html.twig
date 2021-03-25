@@ -1,4 +1,4 @@
-<div class="container p-2 text-white" id="contact">
+ <div class="container p-2 text-white" id="contact">
 
     <!-- FORM -->
     <section class="pt-8 pt-md-11 pb-8 pb-md-14 col-lg-8 mx-auto">
@@ -13,10 +13,13 @@
                 </div>
             </div> <!-- / .row -->
             <div class="row justify-content-center">
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(formContact) }}
+                </div>
                 <div class="col-12 col-md-12 col-lg-10">
 
                     <!-- Form -->
-                    <form>
+                    {{ form_start(formContact) }}
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="form-group mb-5">
@@ -27,7 +30,7 @@
                                     </label>
 
                                     <!-- Input -->
-                                    <input class="form-control" id="contactName" type="text" placeholder="">
+                                    {{ form_widget(formContact.Name) }}
 
                                 </div>
                             </div>
@@ -40,7 +43,7 @@
                                     </label>
 
                                     <!-- Input -->
-                                    <input class="form-control" id="contactEmail" type="email" placeholder="">
+                                    {{ form_widget(formContact.email) }}
 
                                 </div>
                             </div>
@@ -55,7 +58,7 @@
                                     </label>
 
                                     <!-- Input -->
-                                    <textarea class="form-control" id="contactMessage" rows="5" placeholder=""></textarea>
+                                    {{ form_widget(formContact.Message) }}
 
                                 </div>
                             </div>
@@ -64,13 +67,11 @@
                             <div class="col-auto">
 
                                 <!-- Submit -->
-                                <button type="submit" class="btn btn-warning lift">
-                                    Envoyer votre message
-                                </button>
+                                {{ form_widget(formContact.Envoyer) }}
 
                             </div>
                         </div> <!-- / .row -->
-                    </form>
+
 
                 </div>
             </div> <!-- / .row -->
@@ -78,3 +79,9 @@
     </section>
 
 </div>
+
+
+ {{ form_row(formContact._token) }}
+
+
+{{ form_end(formContact) }}
