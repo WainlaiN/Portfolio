@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services;
-
 
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
@@ -34,18 +32,14 @@ class Mailer
             ->html($render);
 
         if ($send == false) {
-
             return $email;
         }
-
-        //dd($email);
 
         $this->sendEmail($email);
     }
 
     private function sendEmail($email)
     {
-
             $this->mailer->send($email);
 
     }

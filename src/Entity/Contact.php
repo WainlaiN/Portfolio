@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 class Contact
 {
 
@@ -76,7 +75,4 @@ class Contact
     {
         $this->message = $message;
     }
-
-
-
 }

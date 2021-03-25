@@ -19,9 +19,15 @@ class HomeController extends AbstractController
      * @param ProjectRepository $projectRepo
      * @param SkillRepository $skillRepo
      * @param Request $request
+     * @param Mailer $mailer
      * @return Response
      */
-    public function index(ProjectRepository $projectRepo, SkillRepository $skillRepo, Request $request, Mailer $mailer): Response
+    public function index(
+        ProjectRepository $projectRepo,
+        SkillRepository $skillRepo,
+        Request $request,
+        Mailer $mailer
+    ): Response
     {
         $tricks = $projectRepo->findAll();
         $skills = $skillRepo->findAll();
@@ -32,24 +38,21 @@ class HomeController extends AbstractController
 
         $form->handleRequest($request);
 
-
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $name = $message->getName();
-            $email = $message->getEmail();
-            $content = $message->getMessage();
-            //dd($name, $email, $message);
-            $mailer->setMessage($name,
+            $mailer->setMessage($message->getName(),
                 $this->renderView(
                     'email/contact.html.twig',
                     [
-                        'name' => $name,
-                        'message' => $content,
-                        'email' =>$email
+                        'name' => $message->getName(),
+                        'message' => $message->getMessage(),
+                        'email' =>$message->getEmail()
                     ]
                 ),
                 true
             );
+
+            $this->addFlash('success', 'Votre message a bien été envoyé !');
 
 
         }
