@@ -3,45 +3,50 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    <!-- CONTENT -->
-    <div class="container text-white section-background">
-        <div class="row">
-            <div class="col-6 col-md-6">
+	<!-- CONTENT -->
+	<div class="container text-white section-background">
+		<div class="row">
+			<div
+				class="col-6 col-md-6">
 
-                <!-- Sidebar -->
-                <div class="py-md-12">
-                    <!-- Brand -->
-                    <div class="img-fluid mb-4 svg-shim">
-                        {{ project.title }}
-                    </div>
-                    <!-- Text -->
-                    <p class="fs-lg mb-7 text-muted">
-                        {{ project.description |  striptags }}
-                    </p>
+				<!-- Sidebar -->
+				<div
+					class="py-md-12">
+					<!-- Brand -->
+					<div class="img-fluid mb-4 svg-shim">
+						{{ project.title }}
+					</div>
+					<!-- Text -->
+					<p class="fs-lg mb-7 text-muted">
+						{{ project.description |  striptags }}
+					</p>
 
-                    <!-- Heading -->
-                    <h6>
-                        <span class="ms-auto"><a href="{{ project.url }}">{{ project.url }}</a></span>
-                    </h6>
-                </div>
+					<!-- Heading -->
+					<h6>
+						<span class="ms-auto">
+							<a href="{{ project.url }}">{{ project.url }}</a>
+						</span>
+					</h6>
+				</div>
 
-            </div>
-            <div class="col-6 col-md-6">
+			</div>
+			<div
+				class="col-6 col-md-6">
 
-                <!-- Images -->
-                <section class="pb-8 pt-md-12 pb-md-10">
-                    <a class="d-block" data-bigpicture='{"imgSrc": "{{ asset('uploads/images/projects/' ~ project.image) }}"}' href="#">
-                        <img class="img-fluid rounded" src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project_page') }}" alt="...">
-                    </a>
-                </section>
-            </div>
-        </div>
+				<!-- Images -->
+				<section class="pb-8 pt-md-12 pb-md-10">
+					<a class="d-block" data-bigpicture='{"imgSrc": "{{ asset(' uploads/images/projects/' ~ project.image) }}"}' href="#">
+						<img class="img-fluid rounded" src="{{ asset(' uploads/images/projects/' ~ project.image) }}" alt="...">
+					</a>
+				</section>
+			</div>
+		</div>
 
-        <!-- Content -->
-        <div>
-            <h2>Description du projet:</h2>
-            {{ project.content | raw }}
-        </div>
-    </div>
+		<!-- Content -->
+		<div>
+			<h2>Description du projet:</h2>
+			{{ project.content | raw }}
+		</div>
+	</div>
 
 {% endblock %}
