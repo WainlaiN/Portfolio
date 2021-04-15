@@ -14,27 +14,6 @@
 
 			<div class="row">
 				{% for project in projects %}
-					{# <div class="col-12 col-md-6 col-lg-4 d-flex mb-5">
-
-						<!-- Card -->
-						<div class="card mb-6 mb-xl-0 pt-14 overlay overlay-black overlay-30 bg-cover lift" style="background-image: url({{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }});">
-
-							<!-- Body -->
-							<a class="card-body mt-auto" href="{{ path('project_show', { 'slug': project.slug }) }}">
-
-								<!-- Heading -->
-								<h5 class="text-white fw-bold">
-									{{ project.title }}
-								</h5>
-
-								<!-- Text -->
-								<p class="mb-0 text-white">
-									{{ project.description | striptags }}
-								</p>
-							</a>
-						</div>
-
-					</div> #}
 					<div class="col-12 col-md-6 col-lg-4 d-flex">
 
 					<!-- Card -->
@@ -44,7 +23,7 @@
 						<a class="card-img-top" href="{{ path('project_show', { 'slug': project.slug }) }}">
 
 							<!-- Image -->
-							<img src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('project') }}" alt="..." class="card-img-top">
+							<img src="{{ asset('uploads/images/projects/' ~ project.image) }}" alt="..." class="card-img-top">
 
 							<!-- Shape -->
 							<div class="position-relative">
